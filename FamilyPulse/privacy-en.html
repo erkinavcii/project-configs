@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FamilyPulse — Privacy and Data Use</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 760px; margin: 0 auto; padding: 32px 20px 64px;
+    line-height: 1.65; color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #161616; }
+    .box { background: #222 !important; border-color: #3a3a3a !important; }
+    code { background: #2a2a2a !important; }
+    th { background: #222 !important; }
+    td, th { border-color: #3a3a3a !important; }
+    a { color: #6cb4ff; }
+  }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.2rem; }
+  .sub { color: #666; margin-top: 0; }
+  .nav-links { font-size: .9rem; margin-top: 10px; }
+  .box { background: #f6f7f9; border: 1px solid #e3e5e8; border-radius: 12px; padding: 16px 18px; margin: 20px 0; }
+  .draft { background: #fff4d6; border: 1px solid #e0b943; color: #6b4e00; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: .9em; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: .93rem; }
+  th, td { border: 1px solid #e3e5e8; padding: 9px 11px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+</style>
+</head>
+<body>
+
+<h1>FamilyPulse — Privacy and Data Use</h1>
+<p class="sub">Last updated: [DATE]</p>
+<p class="nav-links"><a href="./privacy.html">Türkçe sürüm</a> · <a href="./terms-of-service-en.html">Terms of Service</a> · <a href="./delete-account-en.html">Delete Account</a></p>
+
+<div class="box draft">
+  <strong>⚠️ DRAFT — NOT READY FOR PUBLICATION</strong><br>
+  The <em>data inventory</em> below was extracted directly from the app's code and is
+  technically accurate. However, the legal framework (data controller details, legal bases for
+  processing, the basis for international transfers, retention statements) <strong>has not been
+  reviewed by a lawyer</strong>. Do not publish before all bracketed placeholders are filled in
+  and a legal review has been completed.
+</div>
+
+<h2>1. Data Controller</h2>
+<p>
+  <strong>[FULL NAME / COMPANY NAME]</strong><br>
+  Contact: <code>[SUPPORT_EMAIL_HERE]</code>
+</p>
+
+<h2>2. Data We Collect</h2>
+<table>
+  <tr><th>Data</th><th>When it's collected</th><th>Why</th></tr>
+  <tr><td>Name, email</td><td>At registration</td><td>Creating and signing in to your account</td></tr>
+  <tr><td>Age, weight, gender</td><td>At registration</td><td>Stored for the heart-rate threshold calculation of an upcoming health-tracking feature. <strong>Not processed in this version.</strong></td></tr>
+  <tr><td>Location</td><td>Whenever location sharing is on, including while the app is closed</td><td>Letting your family see you on the map, safe-zone notifications</td></tr>
+  <tr><td>Battery level, ringer mode</td><td>Together with location updates</td><td>Letting your family see your reachability, remote audio unmute</td></tr>
+  <tr><td>Heart rate (health data)</td><td><strong>Not collected.</strong> Health tracking is disabled in this version.</td><td>—</td></tr>
+</table>
+
+<h2>3. Who We Share Data With</h2>
+<ul>
+  <li><strong>Members of your family group:</strong> your location, battery and ringer status, and any alerts generated.</li>
+  <li><strong>Google (Firebase):</strong> data is stored and processed on Google Firebase infrastructure (authentication, database).</li>
+  <li>
+    <strong>OpenStreetMap (map imagery):</strong> maps are fetched from the OpenStreetMap
+    Foundation's servers. When a map is displayed, the tile coordinates of the area being viewed
+    are sent to those servers along with <strong>your device's IP address</strong>. In technical
+    terms this means the approximate area you are looking at becomes known to them.
+    <strong>Your stored location records, your account, and your family group information are not
+    sent to OpenStreetMap.</strong>
+  </li>
+  <li>
+    <strong>No sale of data:</strong> your data is never sold, rented, or transferred for marketing
+    purposes to data brokers or any third party. It is shared only with the technical
+    sub-processors needed to deliver the service; those listed above are the complete set.
+  </li>
+  <li>
+    <strong>Advertising:</strong> the current version displays no advertising and shares no data
+    for advertising purposes. Should an ad-supported, sponsored, or differently tiered model be
+    introduced in future, this policy will be updated and the change announced to users in advance.
+  </li>
+  <li>
+    <strong>Analytics and crash reporting:</strong> the current version contains no analytics or
+    crash-reporting SDK, and collects no data for those purposes. This policy will be updated if
+    that changes.
+  </li>
+</ul>
+
+<h2>4. International Data Transfers</h2>
+<p>For the service to function, the following data is transferred to servers outside Türkiye:</p>
+<ul>
+  <li><strong>To Google Firebase:</strong> your account details, location data, device status (battery/ringer), alerts, and weekly reports.</li>
+  <li><strong>To OpenStreetMap:</strong> your device's IP address and the tile coordinates of the area being viewed, whenever map imagery is requested (see Section 3).</li>
+</ul>
+<div class="box draft">
+  <strong>[TO BE COMPLETED BY LEGAL COUNSEL — TRANSFER BASIS MUST BE CHOSEN]</strong><br>
+  This transfer falls under KVKK Art. 9 and its legal basis must be stated <strong>explicitly</strong>
+  here. There are two routes, and <strong>which one is chosen also changes the flow inside the
+  app</strong>:
+  <ul style="margin:.6rem 0 0">
+    <li>
+      <strong>(a) Standard contract:</strong> a standard contract is signed with Google and the
+      Turkish Data Protection Authority (KVKK Kurulu) is notified <strong>within 5 business
+      days</strong> of signature. This route does not additionally require explicit consent from
+      the user.
+    </li>
+    <li>
+      <strong>(b) Explicit consent:</strong> if this route is chosen, registration must collect a
+      <strong>separate, optional consent for the international transfer that is not bundled with
+      any other approval</strong> — the existing "I have read the privacy policy" checkbox does not
+      satisfy this. A dedicated checkbox would need to be added to the app.
+    </li>
+  </ul>
+  For users in the EEA, the equivalent GDPR Chapter V basis (Standard Contractual Clauses, an
+  adequacy decision) must also be specified.
+</div>
+
+<h2>5. Retention Periods</h2>
+<ul>
+  <li><strong>Location history:</strong> automatically deleted after 14 days.</li>
+  <li><strong>Live location:</strong> only the latest value is kept; each update replaces the previous one.</li>
+  <li><strong>Weekly reports and alerts:</strong> retained until your account is deleted.</li>
+  <li><strong>Account information:</strong> retained until your account is deleted.</li>
+</ul>
+
+<h2>6. Your Rights</h2>
+<ul>
+  <li><strong>Deletion:</strong> from within the app (Profile → Delete My Account and Data) or via
+      <a href="./delete-account-en.html">this page</a>.</li>
+  <li><strong>Stopping location sharing:</strong> any time, from the Profile section.</li>
+  <li><strong>Health data:</strong> not collected at all in this version. When smartwatch
+      integration launches, you will be asked for separate, explicit consent; declining will not
+      affect any other feature of the app.</li>
+  <li>For your other rights (access, rectification, objection, etc.) under KVKK Art. 11, or GDPR
+      Art. 15–21 if you are in the EEA — see also the EEA rights section of our
+      <a href="./terms-of-service-en.html">Terms of Service</a> — contact
+      <code>[SUPPORT_EMAIL_HERE]</code>.</li>
+</ul>
+
+<h2>7. Children's Data</h2>
+<div class="box draft">
+  <strong>[TO BE COMPLETED BY LEGAL COUNSEL]</strong> — The app can process the location of
+  children for family-tracking purposes. The parental/guardian consent mechanism and the
+  applicable age threshold must be defined in this section.
+</div>
+
+<h2>8. Medical Disclaimer</h2>
+<p>
+  FamilyPulse is not a medical device. No health data is processed in this version; any future
+  heart-rate measurements and alerts will likewise not be usable for diagnosis, treatment, or
+  medical decision-making — they are intended solely to inform family members. Call your local
+  emergency number in a genuine emergency.
+</p>
+
+</body>
+</html>

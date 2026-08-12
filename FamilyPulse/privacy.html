@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FamilyPulse — Gizlilik ve Veri Kullanımı</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 760px; margin: 0 auto; padding: 32px 20px 64px;
+    line-height: 1.65; color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #161616; }
+    .box { background: #222 !important; border-color: #3a3a3a !important; }
+    code { background: #2a2a2a !important; }
+    th { background: #222 !important; }
+    td, th { border-color: #3a3a3a !important; }
+    a { color: #6cb4ff; }
+  }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.2rem; }
+  .sub { color: #666; margin-top: 0; }
+  .nav-links { font-size: .9rem; margin-top: 10px; }
+  .box { background: #f6f7f9; border: 1px solid #e3e5e8; border-radius: 12px; padding: 16px 18px; margin: 20px 0; }
+  .draft { background: #fff4d6; border: 1px solid #e0b943; color: #6b4e00; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: .9em; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: .93rem; }
+  th, td { border: 1px solid #e3e5e8; padding: 9px 11px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+</style>
+</head>
+<body>
+
+<h1>FamilyPulse — Gizlilik ve Veri Kullanımı</h1>
+<p class="sub">Son güncelleme: [TARİH]</p>
+<p class="nav-links"><a href="./privacy-en.html">English version</a> · <a href="./terms-of-service.html">Kullanım Şartları</a> · <a href="./delete-account.html">Hesap Silme</a></p>
+
+<div class="box draft">
+  <strong>⚠️ TASLAK — YAYINA HAZIR DEĞİL</strong><br>
+  Aşağıdaki <em>veri envanteri</em> uygulamanın kodundan çıkarılmıştır ve teknik olarak
+  doğrudur. Ancak hukuki çerçeve (veri sorumlusu bilgileri, işleme şartları, yurt dışına
+  aktarım dayanağı, saklama ifadeleri) <strong>bir avukat tarafından gözden geçirilmemiştir</strong>.
+  Köşeli parantezli alanlar doldurulmadan ve hukuki inceleme yapılmadan yayınlamayın.
+</div>
+
+<h2>1. Veri sorumlusu</h2>
+<p>
+  <strong>[AD SOYAD / ŞİRKET UNVANI]</strong><br>
+  İletişim: <code>[BURAYA_DESTEK_EPOSTASI]</code>
+</p>
+
+<h2>2. Toplanan veriler</h2>
+<table>
+  <tr><th>Veri</th><th>Ne zaman toplanır</th><th>Neden</th></tr>
+  <tr><td>Ad, e-posta</td><td>Kayıt sırasında</td><td>Hesap oluşturma ve giriş</td></tr>
+  <tr><td>Yaş, kilo, cinsiyet</td><td>Kayıt sırasında</td><td>Çok yakında gelecek sağlık takibinde nabız eşiği hesabı için saklanır. <strong>Bu sürümde işlenmiyor.</strong></td></tr>
+  <tr><td>Konum</td><td>Konum paylaşımı açıkken, uygulama kapalıyken dahil</td><td>Ailenin haritada görmesi, güvenli bölge bildirimleri</td></tr>
+  <tr><td>Pil seviyesi, zil modu</td><td>Konum güncellemeleriyle birlikte</td><td>Ailenin ulaşılabilirliği görmesi, uzaktan ses açma</td></tr>
+  <tr><td>Nabız (sağlık verisi)</td><td><strong>Toplanmıyor.</strong> Sağlık takibi bu sürümde kapalıdır.</td><td>—</td></tr>
+</table>
+
+<h2>3. Verilerin paylaşıldığı taraflar</h2>
+<ul>
+  <li><strong>Aile grubunuzdaki üyeler:</strong> konumunuz, pil ve zil durumunuz, oluşan uyarılar.</li>
+  <li><strong>Google (Firebase):</strong> veriler Google Firebase altyapısında saklanır ve işlenir (kimlik doğrulama, veritabanı).</li>
+  <li>
+    <strong>OpenStreetMap (harita görüntüleri):</strong> Haritalar OpenStreetMap Foundation'ın
+    sunucularından çekilir. Harita açıldığında, görüntülenen bölgenin karo (tile) koordinatları ile
+    birlikte <strong>cihazınızın IP adresi</strong> bu sunuculara iletilir. Bu, teknik olarak
+    baktığınız bölgenin yaklaşık olarak bilinmesi anlamına gelir. <strong>Konum kayıtlarınız,
+    hesabınız veya aile grubu bilgileriniz OpenStreetMap'e gönderilmez.</strong>
+  </li>
+  <li>
+    <strong>Veri satışı yapılmaz:</strong> Verileriniz veri tüccarlarına veya üçüncü taraflara
+    satılmaz, kiralanmaz ve pazarlama amacıyla devredilmez. Veriler yalnızca hizmetin sunulabilmesi
+    için gereken teknik alt hizmet sağlayıcılarla (alt işleyenler) paylaşılır; yukarıda sayılanlar
+    bu kapsamın tamamıdır.
+  </li>
+  <li>
+    <strong>Reklam:</strong> Mevcut sürümde uygulamada reklam gösterilmemekte ve hiçbir veri reklam
+    amacıyla paylaşılmamaktadır. İleride reklamlı, sponsorlu veya farklı üyelik katmanları içeren bir
+    model getirilmesi hâlinde bu politika güncellenerek değişiklik kullanıcılara önceden duyurulacaktır.
+  </li>
+  <li>
+    <strong>Analiz ve çökme raporlama:</strong> Mevcut sürümde uygulamada herhangi bir analiz
+    (analytics) veya çökme raporlama (crash reporting) SDK'sı bulunmamaktadır; bu amaçla veri
+    toplanmamaktadır. Bu durum değişirse politika güncellenecektir.
+  </li>
+</ul>
+
+<h2>4. Yurt dışına aktarım</h2>
+<p>
+  Hizmetin çalışabilmesi için aşağıdaki veriler Türkiye dışındaki sunuculara aktarılmaktadır:
+</p>
+<ul>
+  <li><strong>Google Firebase'e:</strong> hesap bilgileriniz, konum verileriniz, cihaz durumu (pil/zil), uyarılar ve haftalık raporlar.</li>
+  <li><strong>OpenStreetMap'e:</strong> harita görüntüleri istenirken cihazınızın IP adresi ve görüntülenen bölgenin karo koordinatları (bkz. Madde 3).</li>
+</ul>
+<div class="box draft">
+  <strong>[HUKUKÇU TARAFINDAN DOLDURULACAK — AKTARIM DAYANAĞI SEÇİLMELİ]</strong><br>
+  Bu aktarım KVKK m.9 kapsamındadır ve dayanağının burada <strong>açıkça</strong> belirtilmesi
+  gerekir. İki yol vardır ve <strong>hangisinin seçildiği uygulamadaki akışı da değiştirir</strong>:
+  <ul style="margin:.6rem 0 0">
+    <li>
+      <strong>(a) Standart sözleşme:</strong> Google ile standart sözleşme imzalanır ve imzadan
+      itibaren <strong>5 iş günü içinde</strong> KVKK Kurulu'na bildirim yapılır. Bu yolda
+      kullanıcıdan ayrıca açık rıza alınması gerekmez.
+    </li>
+    <li>
+      <strong>(b) Açık rıza:</strong> Bu yol seçilirse, kayıt akışında yurt dışına aktarım için
+      <strong>diğer onaylarla paketlenmemiş, ayrı ve isteğe bağlı bir onay</strong> alınması
+      gerekir — mevcut "gizlilik politikasını okudum" kutucuğu bunun yerine geçmez. Bu durumda
+      uygulamaya ayrı bir onay kutucuğu eklenmelidir.
+    </li>
+  </ul>
+  Avrupa Ekonomik Alanı'ndaki kullanıcılar için GDPR Bölüm V kapsamındaki dayanak (Standart
+  Sözleşme Hükümleri / yeterlilik kararı) da ayrıca belirtilmelidir.
+</div>
+
+<h2>5. Saklama süreleri</h2>
+<ul>
+  <li><strong>Konum geçmişi:</strong> 14 gün sonra otomatik silinir.</li>
+  <li><strong>Anlık konum:</strong> yalnızca en son değer tutulur, yenisiyle değiştirilir.</li>
+  <li><strong>Haftalık raporlar ve uyarılar:</strong> hesap silinene kadar.</li>
+  <li><strong>Hesap bilgileri:</strong> hesap silinene kadar.</li>
+</ul>
+
+<h2>6. Haklarınız</h2>
+<ul>
+  <li><strong>Silme:</strong> Uygulama içinden (Profil → Hesabımı ve Verilerimi Sil) veya
+      <a href="./delete-account.html">bu sayfadan</a>.</li>
+  <li><strong>Konum paylaşımını durdurma:</strong> Profil bölümünden istediğiniz an.</li>
+  <li><strong>Sağlık verisi:</strong> Bu sürümde hiç toplanmamaktadır. Akıllı saat entegrasyonu
+      geldiğinde sizden ayrıca ve açıkça izin istenecek; izin vermemeniz uygulamanın diğer
+      özelliklerini etkilemeyecektir.</li>
+  <li>KVKK m.11 kapsamındaki diğer haklarınız için <code>[BURAYA_DESTEK_EPOSTASI]</code>.</li>
+</ul>
+
+<h2>7. Çocukların verileri</h2>
+<div class="box draft">
+  <strong>[HUKUKÇU TARAFINDAN DOLDURULACAK]</strong> — Uygulama aile takibi amacıyla çocukların
+  konumunu işleyebilmektedir. Veli onayı mekanizması ve yaş sınırı bu bölümde tanımlanmalıdır.
+</div>
+
+<h2>8. Tıbbi feragatname</h2>
+<p>
+  FamilyPulse tıbbi bir cihaz değildir. Bu sürümde sağlık verisi işlenmemektedir; ileride
+  eklenecek nabız ölçümleri ve uyarılar da teşhis, tedavi veya tıbbi karar amacıyla
+  kullanılamayacak, yalnızca aile üyelerini bilgilendirmeye yönelik olacaktır.
+  Acil durumlarda 112'yi arayın.
+</p>
+
+<hr style="margin:36px 0; border:none; border-top:1px solid #e3e5e8;">
+<p style="font-size:.85rem; color:#666;">
+  İlgili belgeler:
+  <a href="./terms-of-service.html">Kullanım Şartları</a> ·
+  <a href="./delete-account.html">Hesap ve Veri Silme Talebi</a> ·
+  <a href="./privacy-en.html">English version</a>
+</p>
+
+</body>
+</html>
