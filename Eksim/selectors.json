@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "minAppVersion": 1,
+
+  "_meta": {
+    "olcum_tarihi": "2026-08-07",
+    "kaynak": "docs/NETWORK_MAP.md",
+    "fixture": "core-parser/src/test/resources/fixtures/2026-08-07/",
+    "not": "Buradaki her deger fixture'lara karsi dogrulanmistir. Dogrulanmamis deger eklenmez.",
+    "kapsam": "v1 - girissiz okuyucu. Oturumlu alanlar icin bkz. docs/FUTURES.md"
+  },
+
+  "baseUrl": "https://eksisozluk.com",
+
+  "userAgent": {
+    "kaynak": "WebSettings.getDefaultUserAgent",
+    "hardcodeEtme": true,
+    "_not": "Cihaz UA'si ornegi (2026-08-07): Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36 - Chrome ana surumu WebView guncellendikce degisir, bu yuzden sistemden okunur."
+  },
+
+  "endpoints": {
+    "topicList": {
+      "populer": "/basliklar/m/populer",
+      "channel": "/basliklar/m/kanal/{kanal}",
+      "search": "/basliklar/ara"
+    },
+    "entryFlow": {
+      "debe": "/debe",
+      "tarihteBugun": "/basliklar/tarihte-bugun",
+      "profileEntries": "/son-entryleri?nick={nick}",
+      "profileFavorites": "/favori-entryleri?nick={nick}"
+    },
+    "topic": "/{slug}--{id}",
+    "quickSearch": "/?q={q}",
+    "profile": "/biri/{nick}",
+    "channelList": "/kanallar/m",
+    "_autocompleteNot": "OLCULDU 2026-08-09: saf JSON doner {Titles:[],Nicks:[],Query:''}. 'X-Requested-With: XMLHttpRequest' ZORUNLU - baslıksiz HTTP 500.",
+    "autocomplete": "/autocomplete/query?q={q}",
+    "_actionsNot": "URL + govde bicimi JS kaynagindan cikarildi (ek$i-combo.js), UYGULAMA UZERINDEN GERCEK HESAPLA CANLI DOGRULANDI (2026-08-12, iki entry'de favorile+favoriden cikar). Sunucu tam {Success,Count,ErrorMessage} semasini dondu. Govde form-encoded {entryId}. CSRF token GERCEKTEN ISTENMIYOR. Oturumsuzken/kendi entry'nde entry.flags 'favorite' ICERMEZ, buton o yuzden flags'e bakiyor.",
+    "actions": {
+      "favorite": "/entry/favla",
+      "unfavorite": "/entry/favlama"
+    }
+  },
+
+  "searchParams": {
+    "keywords": "SearchForm.Keywords",
+    "author": "SearchForm.Author",
+    "dateFrom": "SearchForm.When.From",
+    "dateTo": "SearchForm.When.To",
+    "niceOnly": "SearchForm.NiceOnly",
+    "sortOrder": "SearchForm.SortOrder",
+    "_sortOrderDegerleri": "OLCULDU 2026-08-09: Topic=alfabetik, Date=yeniden eskiye, Count='dolu dolu' (entry sayisina gore). Sitenin varsayilani ALFABETIK - 1-2 entry'li basliklari one atiyor, bu yuzden uygulama Count kullaniyor.",
+    "sortOrderByCount": "Count",
+    "sortOrderByDate": "Date",
+    "sortOrderAlphabetical": "Topic"
+  },
+
+  "pagination": {
+    "param": "p",
+    "firstPage": 1,
+
+    "topic": {
+      "_tip": "Toplam sayfa BILINIR. Sayfaya atlama mumkun.",
+      "container": { "css": ".pager", "optional": true },
+      "current": { "attr": "data-currentpage", "on": ".pager" },
+      "total": { "attr": "data-pagecount", "on": ".pager" }
+    },
+
+    "list": {
+      "_tip": "Toplam sayfa BILINMEZ. Sadece sonraki sayfa linki var.",
+      "nextLink": { "css": "a[href*='p=']", "optional": true }
+    }
+  },
+
+  "selectors": {
+    "topicList": {
+      "_kaynak": "topic_list_m_populer.html, channel_spor_mobile.html, search_results.html",
+      "_not": "'.partial' ve '#mobile-index' arama sonuclarinda YOK. Genel secici kullan.",
+      "item": { "css": "ul.topic-list > li > a" },
+      "url": { "attr": "href" },
+      "title": { "text": "self", "excludeChildren": ["small"] },
+      "entryCount": {
+        "css": "small",
+        "optional": true,
+        "_not": "Her baslikta yok. Olculen: gundem 50/50, kanal 28/50, arama 37/50."
+      }
+    },
+
+    "channelList": {
+      "_kaynak": "channel_list_mobile.html",
+      "item": { "css": ".index-link" },
+      "url": { "attr": "href" },
+      "title": { "text": "self" },
+      "description": { "attr": "title", "optional": true }
+    },
+
+    "topic": {
+      "_kaynak": "entry_page_1.html, entry_page_last.html, quick_search_topic_redirect.html",
+      "_not": "Baslik sayfasinda h1#title TEKTIR. entryFlow sayfalarinda (debe) BIRDEN COKTUR - her entry kendi basligini tasir.",
+      "container": { "css": "#topic" },
+      "titleElement": { "css": "h1#title" },
+      "id": { "attr": "data-id", "on": "h1#title" },
+      "slug": { "attr": "data-slug", "on": "h1#title" },
+      "title": { "attr": "data-title", "on": "h1#title", "fallback": "h1#title" }
+    },
+
+    "entry": {
+      "_kaynak": "entry_page_1.html, entry_page_last.html, debe.html, quick_search_topic_redirect.html",
+      "_not": "Once data-*, sonra CSS. Bkz. PROJE_PLANI.md 4.4",
+      "item": { "css": "#entry-item-list > li" },
+
+      "id": { "attr": "data-id" },
+      "author": { "attr": "data-author", "fallback": ".entry-author" },
+      "authorId": { "attr": "data-author-id" },
+      "favoriteCount": { "attr": "data-favorite-count" },
+      "commentCount": { "attr": "data-comment-count" },
+      "likeCount": { "attr": "data-likecount", "optional": true },
+      "isPinned": { "attr": "data-ispinned", "optional": true },
+      "isFavorite": { "attr": "data-isfavorite", "optional": true },
+      "flags": { "attr": "data-flags", "optional": true },
+
+      "content": { "css": ".content" },
+      "date": {
+        "css": ".entry-date",
+        "_not": "Format: '30.07.2026 22:58' veya duzenlenmisse '30.07.2026 22:58 ~ 04.08.2026 15:2x'. Eski entry'lerde saat olmayabilir: '23.06.1999'"
+      },
+      "permalink": { "css": "a.entry-date.permalink", "prop": "href" },
+      "avatar": { "css": ".avatar", "prop": "src", "optional": true },
+      "innerLinks": { "css": ".b", "optional": true }
+    },
+
+    "profile": {
+      "_kaynak": "profile.html",
+      "titleElement": { "css": "#user-profile-title" },
+      "nick": { "attr": "data-nick", "on": "#user-profile-title" },
+      "stats": { "css": "#user-entry-stats" },
+      "entryCountTotal": { "css": "#entry-count-total" },
+      "tabs": { "css": "#profile-stats-section-nav li > a.tab-trigger" },
+      "tabUrl": { "attr": "href" }
+    },
+
+    "session": {
+      "_not": "ANONIM tarafi olculdu (2026-08-09, homepage_anon.html): div#top-bar.loggedoff VAR, #top-login-link VAR, #top-navigation icinde /biri/ baglantisi YOK. OTURUMLU tarafi HALA OLCULMEDI - bunlarin oturum acikken tersine dondugu dogrulanmadi. Bkz. docs/FUTURES.md 1",
+      "loggedOff": { "css": "div.loggedoff", "verified": false },
+      "loginLink": { "css": "#top-login-link", "optional": true, "verified": false },
+      "profileLink": {
+        "css": "#top-navigation a[href^='/biri/']",
+        "prop": "href",
+        "optional": true,
+        "verified": false,
+        "_not": "Genel '/biri/' secicisi KULLANILAMAZ - anonim ana sayfada entry yazar baglantisi olarak 20 kez geciyor. #top-navigation kapsami sart."
+      }
+    }
+  },
+
+  "challenge": {
+    "_kaynak": "NETWORK_MAP 2.3 - Python-urllib UA'si ile tetiklendi",
+    "_not": "cf-mitigated header'i GELMEDI, ona guvenme.",
+    "statusCodes": [403, 503],
+    "bodyMarkers": [
+      "just a moment",
+      "challenge-platform",
+      "cf_chl",
+      "_cf_chl_opt",
+      "enable javascript and cookies"
+    ],
+    "selector": ".challenge-form"
+  }
+}
