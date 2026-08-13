@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hesap ve Veri Silme / Account &amp; Data Deletion — Gym Progress Tracker</title>
+<style>
+/* Gym Progress Tracker — hukuki sayfalar
+   Bagimlilik yok: harici font/CDN cagrilmaz, tek dosya. */
+
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #e2e2e2;
+  --accent: #d94f2b;
+  --card: #f7f7f7;
+  --warn-bg: #fff6e5;
+  --warn-line: #e6a23c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --fg: #ececec;
+    --muted: #a3a3a3;
+    --line: #2e2e2e;
+    --accent: #ff7043;
+    --card: #1c1c1c;
+    --warn-bg: #2a2115;
+    --warn-line: #b9822f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; }
+
+header {
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0 18px;
+  margin-bottom: 32px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .02em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 10px; }
+h2 { font-size: 20px; margin: 38px 0 12px; padding-top: 6px; border-top: 1px solid var(--line); }
+h3 { font-size: 16px; margin: 24px 0 8px; }
+
+.meta { color: var(--muted); font-size: 14px; margin: 0; }
+
+.langbar { margin: 14px 0 0; font-size: 14px; }
+.langbar a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.langbar a:hover { text-decoration: underline; }
+.langbar span { color: var(--muted); }
+
+a { color: var(--accent); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 15px;
+  display: block;
+  overflow-x: auto;
+}
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--card); font-weight: 600; white-space: nowrap; }
+
+ul, ol { padding-left: 22px; }
+li { margin: 6px 0; }
+
+code {
+  background: var(--card);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 90%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.callout {
+  background: var(--warn-bg);
+  border-left: 4px solid var(--warn-line);
+  padding: 14px 16px;
+  margin: 20px 0;
+  border-radius: 0 6px 6px 0;
+}
+.callout p { margin: 0; }
+.callout strong { display: block; margin-bottom: 4px; }
+
+.todo {
+  background: var(--card);
+  border: 1px dashed var(--accent);
+  padding: 14px 16px;
+  margin: 20px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 24px 0; }
+.card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  background: var(--card);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card:hover { border-color: var(--accent); }
+.card h3 { margin: 0 0 4px; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+.draft {
+  background: #fff4d6;
+  border: 1px solid #e0b943;
+  color: #6b4e00;
+  padding: 14px 16px;
+  margin: 18px 0 26px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+@media (prefers-color-scheme: dark) {
+  .draft { background: #3a2f10; border-color: #7d6320; color: #f0dda6; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="brand">Gym Progress Tracker</p>
+  <h1>Hesap ve Veri Silme <span style="color:var(--muted);font-weight:400">/ Account &amp; Data Deletion</span></h1>
+  <p class="meta">Son güncelleme / Last updated: <strong>30 Temmuz 2026</strong></p>
+</header>
+
+<div class="draft">
+  <strong>⚠️ TASLAK — YAYINA HAZIR DEĞİL</strong><br>
+  Bu metin henüz nihai değildir. Veri sorumlusuna ait bilgiler (yasal unvan, adres,
+  iletişim) doldurulmamıştır ve metin hukuki incelemeden geçmemiştir. Uygulama
+  henüz yayında olmadığı için sayfa yalnızca bilgilendirme amacıyla erişime açıktır;
+  Google Play'e sunulacak nihai sürüm bu alanlar tamamlandıktan sonra yayımlanacaktır.
+</div>
+<div class="draft">
+  <strong>⚠️ DRAFT — NOT READY FOR PUBLICATION</strong><br>
+  This text is not final. Data controller details (legal name, address, contact) are
+  not yet filled in and the text has not undergone legal review. The app is not yet
+  published, so this page is available for information only; the final version
+  submitted to Google Play will be published once these fields are completed.
+</div>
+
+<div class="todo">
+  <strong>Not (yayın öncesi):</strong> Bu sayfanın adresi Google Play Console →
+  <em>App content → Data safety → Account deletion</em> alanına girilmelidir. Play, hesap
+  oluşturulabilen uygulamalar için uygulama dışından erişilebilen bir silme adresi zorunlu tutar.
+  <code>[İLETİŞİM E-POSTASI]</code> alanı doldurulmalıdır.
+</div>
+
+<h2 style="border:0;margin-top:8px">Türkçe</h2>
+
+<h3>Yöntem 1 — Uygulama içinden (anında)</h3>
+<ol>
+  <li>Uygulamayı açın ve hesabınıza giriş yapın.</li>
+  <li><strong>Profil</strong> sekmesine gidin.</li>
+  <li>En alttaki kırmızı <strong>Hesabı Sil</strong> seçeneğine dokunun.</li>
+  <li>Güvenlik için parolanızı girin ve işlemi onaylayın.</li>
+</ol>
+<p>Silme işlemi anında gerçekleşir; ayrıca bir talep göndermenize gerek yoktur.</p>
+
+<h3>Yöntem 2 — E-posta ile</h3>
+<p>Uygulamaya erişemiyorsanız (örneğin parolanızı unuttuysanız veya cihazınız yoksa),
+<strong>[İLETİŞİM E-POSTASI]</strong> adresine hesabınızın <strong>kayıtlı e-posta adresinden</strong>
+"Hesap silme talebi" konulu bir ileti gönderin. Talebinizi kimliğinizi doğruladıktan sonra en geç
+<strong>30 gün</strong> içinde sonuçlandırırız.</p>
+
+<h3>Silinen veriler</h3>
+<ul>
+  <li>Hesabınız ve kimlik doğrulama kaydınız (e-posta, ad, kullanıcı adı)</li>
+  <li>Profil ve vücut verileriniz (yaş, cinsiyet, boy, ağırlık ve ağırlık geçmişi)</li>
+  <li>Tüm antrenman kayıtlarınız, özel hareketleriniz ve rutinleriniz</li>
+  <li>Seri (streak) sayaçlarınız ve kişisel rekorlarınız</li>
+  <li>Arkadaşlık istekleriniz ve diğer kullanıcıların arkadaş listelerindeki kaydınız</li>
+  <li>Cihazınızda saklanan tercihleriniz (bildirim ayarları, dil, sayaç tercihleri)</li>
+</ul>
+
+<h3>Saklama süresi</h3>
+<p>Yukarıdaki veriler silme anında kaldırılır. Hizmet sağlayıcımızın rutin yedeklerinde kısa bir süre
+artık kopyalar bulunabilir; bunlar yedek rotasyonu kapsamında en geç <strong>30 gün</strong> içinde
+üzerine yazılır. Mevzuat gereği saklanması zorunlu kayıtlar varsa yalnızca bunlar ve yalnızca kanuni
+süre boyunca tutulur.</p>
+
+<div class="callout">
+  <strong>Silme işlemi geri alınamaz</strong>
+  <p>Hesabınızı sildikten sonra antrenman geçmişiniz kurtarılamaz. Verilerinizi saklamak
+  istiyorsanız silmeden önce bir yedeğini almanız önerilir.</p>
+</div>
+
+<h2>English</h2>
+
+<h3>Option 1 — In the app (immediate)</h3>
+<ol>
+  <li>Open the app and sign in to your account.</li>
+  <li>Go to the <strong>Profile</strong> tab.</li>
+  <li>Tap the red <strong>Delete Account</strong> option at the bottom.</li>
+  <li>Enter your password to confirm.</li>
+</ol>
+<p>Deletion happens immediately — no separate request is needed.</p>
+
+<h3>Option 2 — By e-mail</h3>
+<p>If you cannot access the app (for example you forgot your password or no longer have the device),
+send a message titled "Account deletion request" to <strong>[CONTACT E-MAIL]</strong>
+<strong>from the e-mail address registered to the account</strong>. We will verify your identity and
+complete the request within <strong>30 days</strong>.</p>
+
+<h3>What gets deleted</h3>
+<ul>
+  <li>Your account and authentication record (e-mail, name, username)</li>
+  <li>Your profile and body data (age, gender, height, weight and weight history)</li>
+  <li>All workout logs, custom exercises and routines</li>
+  <li>Streak counters and personal records</li>
+  <li>Friend requests and your entry in other users' friend lists</li>
+  <li>Preferences stored on your device (notification settings, language, timer preferences)</li>
+</ul>
+
+<h3>Retention</h3>
+<p>The data above is removed at the time of deletion. Residual copies may remain in our provider's
+routine backups for a short period and are overwritten within <strong>30 days</strong> as part of
+backup rotation. Where law requires us to retain specific records, only those are kept, and only for
+the statutory period.</p>
+
+<footer>
+  <p><a href="index.html">← Tüm belgeler / All documents</a> ·
+     <a href="privacy.html">Gizlilik</a> · <a href="privacy-en.html">Privacy</a></p>
+</footer>
+
+</div>
+</body>
+</html>

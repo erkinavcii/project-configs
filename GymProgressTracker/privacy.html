@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası ve KVKK Aydınlatma Metni — Gym Progress Tracker</title>
+<style>
+/* Gym Progress Tracker — hukuki sayfalar
+   Bagimlilik yok: harici font/CDN cagrilmaz, tek dosya. */
+
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #e2e2e2;
+  --accent: #d94f2b;
+  --card: #f7f7f7;
+  --warn-bg: #fff6e5;
+  --warn-line: #e6a23c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --fg: #ececec;
+    --muted: #a3a3a3;
+    --line: #2e2e2e;
+    --accent: #ff7043;
+    --card: #1c1c1c;
+    --warn-bg: #2a2115;
+    --warn-line: #b9822f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; }
+
+header {
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0 18px;
+  margin-bottom: 32px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .02em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 10px; }
+h2 { font-size: 20px; margin: 38px 0 12px; padding-top: 6px; border-top: 1px solid var(--line); }
+h3 { font-size: 16px; margin: 24px 0 8px; }
+
+.meta { color: var(--muted); font-size: 14px; margin: 0; }
+
+.langbar { margin: 14px 0 0; font-size: 14px; }
+.langbar a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.langbar a:hover { text-decoration: underline; }
+.langbar span { color: var(--muted); }
+
+a { color: var(--accent); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 15px;
+  display: block;
+  overflow-x: auto;
+}
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--card); font-weight: 600; white-space: nowrap; }
+
+ul, ol { padding-left: 22px; }
+li { margin: 6px 0; }
+
+code {
+  background: var(--card);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 90%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.callout {
+  background: var(--warn-bg);
+  border-left: 4px solid var(--warn-line);
+  padding: 14px 16px;
+  margin: 20px 0;
+  border-radius: 0 6px 6px 0;
+}
+.callout p { margin: 0; }
+.callout strong { display: block; margin-bottom: 4px; }
+
+.todo {
+  background: var(--card);
+  border: 1px dashed var(--accent);
+  padding: 14px 16px;
+  margin: 20px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 24px 0; }
+.card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  background: var(--card);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card:hover { border-color: var(--accent); }
+.card h3 { margin: 0 0 4px; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+.draft {
+  background: #fff4d6;
+  border: 1px solid #e0b943;
+  color: #6b4e00;
+  padding: 14px 16px;
+  margin: 18px 0 26px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+@media (prefers-color-scheme: dark) {
+  .draft { background: #3a2f10; border-color: #7d6320; color: #f0dda6; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="brand">Gym Progress Tracker</p>
+  <h1>Gizlilik Politikası ve KVKK Aydınlatma Metni</h1>
+  <p class="meta">Son güncelleme: <strong>30 Temmuz 2026</strong> · Yürürlük: <strong>30 Temmuz 2026</strong></p>
+  <p class="langbar"><span>Dil:</span> Türkçe · <a href="privacy-en.html">English</a></p>
+</header>
+
+<div class="draft">
+  <strong>⚠️ TASLAK — YAYINA HAZIR DEĞİL</strong><br>
+  Bu metin henüz nihai değildir. Veri sorumlusuna ait bilgiler (yasal unvan, adres,
+  iletişim) doldurulmamıştır ve metin hukuki incelemeden geçmemiştir. Uygulama
+  henüz yayında olmadığı için sayfa yalnızca bilgilendirme amacıyla erişime açıktır;
+  Google Play'e sunulacak nihai sürüm bu alanlar tamamlandıktan sonra yayımlanacaktır.
+</div>
+
+<div class="todo">
+  <strong>Yayınlamadan önce doldurulacak:</strong> veri sorumlusunun yasal unvanı, adresi ve
+  iletişim e-postası. Aşağıdaki tüm <code>[…]</code> alanları değiştirilmelidir.
+</div>
+
+<p>Bu metin, <strong>Gym Progress Tracker</strong> mobil uygulamasının ("Uygulama") hangi kişisel
+verileri işlediğini, bunları neden işlediğini, kimlerle paylaştığını ve 6698 sayılı Kişisel Verilerin
+Korunması Kanunu ("KVKK") kapsamındaki haklarınızı açıklar.</p>
+
+<p>Veri sorumlusu: <strong>[VERİ SORUMLUSUNUN YASAL UNVANI]</strong>, [ADRES],
+iletişim: <strong>[İLETİŞİM E-POSTASI]</strong>.</p>
+
+<h2>1. İşlenen kişisel veriler</h2>
+
+<p>Yalnızca sizin girdiğiniz verileri topluyoruz. Uygulamada reklam, analitik SDK'sı veya pazarlama
+amaçlı izleme <strong>bulunmuyor</strong>.</p>
+
+<table>
+  <tr><th>Veri kategorisi</th><th>İşlenen veriler</th><th>İşlenme amacı</th></tr>
+  <tr>
+    <td>Kimlik ve iletişim</td>
+    <td>E-posta adresi, ad, soyad, kullanıcı adı, parola</td>
+    <td>Hesabın oluşturulması, güvenliğinin sağlanması ve arkadaşlarınızın sizi bulabilmesi</td>
+  </tr>
+  <tr>
+    <td>Profil ve vücut verileri</td>
+    <td>Yaş, cinsiyet, boy, güncel vücut ağırlığı, ağırlık geçmişi</td>
+    <td>İlerleme, kıyaslama ve kişiselleştirilmiş istatistiklerin hesaplanması</td>
+  </tr>
+  <tr>
+    <td>Antrenman verileri</td>
+    <td>Oluşturduğunuz hareketler, antrenman kayıtları (ağırlık, tekrar, set, tarih), rutinler,
+        seri (streak) sayaçları, kişisel rekorlar</td>
+    <td>Uygulamanın temel işlevi</td>
+  </tr>
+  <tr>
+    <td>Sosyal</td>
+    <td>Arkadaş listesi, gönderilen ve alınan arkadaşlık istekleri</td>
+    <td>İsteğe bağlı arkadaş özelliğinin çalıştırılması</td>
+  </tr>
+  <tr>
+    <td>Teknik</td>
+    <td>Firebase kimlik doğrulama kimliği (UID), hesap oluşturma ve son giriş zamanları</td>
+    <td>Kimlik doğrulama ve kötüye kullanımın önlenmesi</td>
+  </tr>
+  <tr>
+    <td>Yalnızca cihazda</td>
+    <td>Bildirim tercihleri, dinlenme sayacı ayarları, dil seçimi, tanıtım ekranı durumu</td>
+    <td>Cihazınızda saklanır, tarafımıza <strong>aktarılmaz</strong></td>
+  </tr>
+</table>
+
+<div class="callout">
+  <strong>Özel nitelikli kişisel veri uyarısı</strong>
+  <p>Vücut ağırlığı, boy, yaş, cinsiyet ve antrenman kayıtları KVKK m.6 ile GDPR m.9 kapsamında
+  <em>sağlık verisi</em> niteliğinde sayılabilir. Bu veriler yalnızca <strong>açık rızanıza</strong>
+  dayanılarak ve sadece Uygulamanın işlevlerini sunmak amacıyla işlenir. Açık rızanızı, ilgili
+  kayıtları veya hesabınızın tamamını silerek her zaman geri çekebilirsiniz.</p>
+</div>
+
+<p>Şunları <strong>toplamıyoruz</strong>: konum verisi, rehber/kişiler, fotoğraflar, kamera veya
+mikrofon kaydı, reklam kimlikleri, Uygulama dışındaki gezinme geçmişiniz.</p>
+
+<h2>2. İşlemenin hukuki sebebi</h2>
+
+<ul>
+  <li><strong>Sözleşmenin kurulması ve ifası</strong> (KVKK m.5/2-c) — hesap ve antrenman verileri,
+      talep ettiğiniz hizmetin sunulabilmesi için zorunludur.</li>
+  <li><strong>Açık rıza</strong> (KVKK m.6/2) — vücut ve sağlıkla ilgili veriler.</li>
+  <li><strong>Meşru menfaat</strong> (KVKK m.5/2-f) — hizmetin güvenliğinin sağlanması ve kötüye
+      kullanımın önlenmesi.</li>
+  <li><strong>Hukuki yükümlülük</strong> (KVKK m.5/2-ç) — mevzuat gereği saklanması gereken kayıtlar.</li>
+</ul>
+
+<h2>3. Uygulamanın talep ettiği izinler</h2>
+
+<table>
+  <tr><th>İzin</th><th>Kullanım amacı</th><th>Zorunlu mu?</th></tr>
+  <tr><td><code>INTERNET</code></td><td>Verilerinizin sunucularımızla eşitlenmesi</td><td>Evet</td></tr>
+  <tr><td><code>POST_NOTIFICATIONS</code></td><td>Dinlenme sayacı ve antrenman hatırlatma bildirimleri</td><td>Hayır — Uygulama izin verilmeden de çalışır</td></tr>
+  <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Dinlenme sayacının saniyesi saniyesine bitmesi</td><td>Hayır — reddedebilirsiniz, süre yaklaşık olur</td></tr>
+  <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Cihaz yeniden başladıktan sonra hatırlatmaların geri yüklenmesi</td><td>Hayır</td></tr>
+  <tr><td><code>VIBRATE</code></td><td>Sayaç bittiğinde titreşimli geri bildirim</td><td>Hayır</td></tr>
+</table>
+
+<p>Uygulama kamera, mikrofon, konum, rehber veya dosya depolama izni istemez.</p>
+
+<h2>4. Kimlerle paylaşılıyor?</h2>
+
+<p>Kişisel verilerinizi satmıyoruz ve reklam amacıyla paylaşmıyoruz. Veriler yalnızca aşağıdaki
+hizmet sağlayıcılarla ve yalnızca Uygulamanın çalışması için gereken ölçüde paylaşılır:</p>
+
+<table>
+  <tr><th>Alıcı</th><th>Amaç</th><th>Konum</th></tr>
+  <tr>
+    <td><strong>Google Firebase</strong> (Authentication, Cloud Firestore) — Google Ireland Ltd. /
+        Google LLC</td>
+    <td>Kimlik doğrulama ve veritabanı saklama</td>
+    <td>Avrupa Birliği (Firestore bölgesi <code>eur3</code>: Belçika ve Hollanda)</td>
+  </tr>
+  <tr>
+    <td><strong>YouTube</strong> (Google)</td>
+    <td>Yalnızca gömülü bir hareket videosunu oynattığınızda. Bu durumda YouTube IP adresinizi alır
+        ve kendi politikası uyarınca çerez yerleştirebilir.</td>
+    <td>Google altyapısı</td>
+  </tr>
+</table>
+
+<p>Diğer kullanıcılar yalnızca arkadaş özelliğinin gerektirdiği kadarını görür: kullanıcı adınız,
+görünen adınız, seri sayınız ve — arkadaşsanız — karşılaştırma için hareket listeniz. E-posta
+adresiniz, vücut ağırlığınız ve ağırlık geçmişiniz diğer kullanıcılara <strong>hiçbir zaman</strong>
+gösterilmez.</p>
+
+<h2>5. Yurt dışına aktarım</h2>
+
+<p>Verileriniz Avrupa Birliği'nde (Belçika ve Hollanda) saklanmaktadır. Bu, KVKK m.9 anlamında
+<strong>yurt dışına aktarım</strong> teşkil eder. Aktarım, hizmet sağlayıcımızla akdedilen ve
+Kurul'un öngördüğü güvenceleri içeren sözleşmeler (standart sözleşme / uygun güvenceler)
+kapsamında ve açık rızanıza dayanılarak gerçekleştirilir. Google, AB dışındaki işleme faaliyetleri
+için Avrupa Komisyonu'nun Standart Sözleşme Maddelerini uygular.</p>
+
+<div class="todo">
+  <strong>Hukuki kontrol gerekiyor:</strong> KVKK'nın 2024 değişikliklerinden sonra yurt dışına
+  aktarım için standart sözleşme Kurul'a bildirilmeli veya taahhütname/uygun güvence
+  mekanizmalarından biri seçilmelidir. Bu maddenin nihai hâli bir hukukçuyla doğrulanmalıdır.
+</div>
+
+<h2>6. Saklama süresi</h2>
+
+<ul>
+  <li><strong>Hesabınız var olduğu sürece</strong> — geçmişinizi gösterebilmek için hesap, profil ve
+      antrenman verileri saklanır.</li>
+  <li><strong>Hesap silindiğinde</strong> — profiliniz, hareketleriniz, antrenman kayıtlarınız,
+      arkadaşlık istekleriniz ve arkadaş listelerindeki kaydınız silinir; kimlik doğrulama kaydınız
+      kaldırılır. Silme işlemi anında gerçekleşir ve Uygulama içinden başlatılır
+      (Profil → Hesabı Sil).</li>
+  <li><strong>Yedekler</strong> — hizmet sağlayıcımızın yedeklerinde kısa bir süre artık kopyalar
+      kalabilir; bunlar rotasyonla üzerine yazılır.</li>
+</ul>
+
+<h2>7. KVKK m.11 kapsamındaki haklarınız</h2>
+
+<p>Veri sorumlusuna başvurarak şu haklara sahipsiniz:</p>
+
+<ul>
+  <li>Kişisel verinizin işlenip işlenmediğini öğrenme,</li>
+  <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+  <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+  <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+  <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+  <li>KVKK m.7'deki şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+  <li>Düzeltme/silme işlemlerinin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+  <li>Münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonucun ortaya
+      çıkmasına itiraz etme,</li>
+  <li>Kanuna aykırı işleme sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme.</li>
+</ul>
+
+<p>Bu hakların çoğunu doğrudan Uygulama içinde kullanabilirsiniz: verilerinizi düzeltmek için
+profilinizi düzenleyin, tamamını silmek için Profil → Hesabı Sil adımını izleyin. Diğer talepleriniz
+için <strong>[İLETİŞİM E-POSTASI]</strong> adresine yazabilirsiniz. Başvurularınız en geç
+<strong>30 gün</strong> içinde sonuçlandırılır.</p>
+
+<h2>8. Veri güvenliği</h2>
+
+<p>Uygulama ile sunucularımız arasındaki trafik TLS ile şifrelenir. Saklanan verilere erişim, sunucu
+tarafındaki güvenlik kurallarıyla sınırlandırılmıştır: antrenman kayıtlarınız yalnızca kendi kimliği
+doğrulanmış hesabınız tarafından okunabilir ve hiçbir kullanıcı bir başkasının kayıtlarına yazamaz.
+Parolalar Firebase Authentication tarafından yönetilir ve tarafımızca hiçbir zaman görülemez.</p>
+
+<p>Hiçbir sistem kusursuz güvenli değildir. Haklarınızı etkileyen bir ihlal olması hâlinde, mevzuatın
+öngördüğü şekilde sizi ve Kişisel Verileri Koruma Kurulu'nu bilgilendiririz.</p>
+
+<h2>9. Çocuklar</h2>
+
+<p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek onların verilerini toplamayız.
+Avrupa Ekonomik Alanı ve Birleşik Krallık'ta 16 yaş altı kullanıcılar için ebeveyn/vasi onayı
+gerekir. Bir çocuğun bize veri sağladığını düşünüyorsanız <strong>[İLETİŞİM E-POSTASI]</strong>
+adresine bildirin, veriyi sileriz.</p>
+
+<h2>10. Bu metindeki değişiklikler</h2>
+
+<p>Bu politikayı güncelleyebiliriz. Sayfanın başındaki "son güncelleme" tarihi her zaman yürürlükteki
+sürümü gösterir. Haklarınızı esaslı şekilde etkileyen bir değişiklikte, yürürlüğe girmeden en az
+<strong>30 gün</strong> önce Uygulama içinde veya e-posta ile bilgilendirme yaparız.</p>
+
+<h2>11. İletişim ve başvuru</h2>
+
+<p><strong>[VERİ SORUMLUSUNUN YASAL UNVANI]</strong><br>
+[ADRES]<br>
+E-posta: <strong>[İLETİŞİM E-POSTASI]</strong></p>
+
+<p>Başvurunuzun sonucundan memnun kalmazsanız Kişisel Verileri Koruma Kurumu'na şikâyette
+bulunma hakkınız saklıdır.</p>
+
+<footer>
+  <p><a href="index.html">← Tüm belgeler</a> · <a href="terms-of-service.html">Kullanım Şartları</a> ·
+     <a href="privacy-en.html">English</a></p>
+</footer>
+
+</div>
+</body>
+</html>

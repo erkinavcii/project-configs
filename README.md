@@ -36,5 +36,22 @@ yapılandırma metinleri.
   kullanılmamalı. Kaynak, güncellenirken FamilyPulse reposundaki `docs/`
   klasörüdür — değişiklik oradan yapılıp buraya yeniden kopyalanmalı.
 
+- `GymProgressTracker/` — [gym_progress_tracker](https://github.com/erkinavcii/gym_progress_tracker)
+  (antrenman ve streak takip uygulaması) için Google Play'in yayın öncesi
+  zorunlu tuttuğu yasal metinler; kaynak kod private repoda olduğu için burada.
+  Türkçe + İngilizce, karşılıklı dil geçiş linkleriyle:
+  - `privacy.html` / `privacy-en.html` — Gizlilik Politikası ve KVKK Aydınlatma Metni
+  - `terms-of-service.html` / `terms-of-service-en.html` — Kullanım Şartları
+  - `delete-account.html` — Hesap ve Veri Silme (tek dosyada iki dilli)
+  - `index.html` — bu klasörün belge listesi
+
+  ⚠️ **Taslak.** Her sayfanın başında TASLAK bandı var; `[VERİ SORUMLUSUNUN
+  YASAL UNVANI]`, `[ADRES]`, `[ŞEHİR]` alanları doldurulmadı ve hukuki inceleme
+  yapılmadı. Play Console'a girilmeden önce tamamlanmalı. Kaynak, güncellenirken
+  gym_progress_tracker reposundaki `docs/site/` klasörüdür — değişiklik oradan
+  yapılıp buraya yeniden kopyalanmalı. Dosya adlandırması ve "sayfa kendi
+  kendine yeter (ortak `style.css` yok)" kuralı kaynakta da aynen uygulanıyor,
+  böylece kopyalama birebir; arada dönüştürme adımı yok.
+
 İleride başka projeler eklenirse aynı desen: `<ProjeAdı>/` altında o
 projenin okuduğu dosyalar.

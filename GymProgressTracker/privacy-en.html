@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Gym Progress Tracker</title>
+<style>
+/* Gym Progress Tracker — hukuki sayfalar
+   Bagimlilik yok: harici font/CDN cagrilmaz, tek dosya. */
+
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #e2e2e2;
+  --accent: #d94f2b;
+  --card: #f7f7f7;
+  --warn-bg: #fff6e5;
+  --warn-line: #e6a23c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --fg: #ececec;
+    --muted: #a3a3a3;
+    --line: #2e2e2e;
+    --accent: #ff7043;
+    --card: #1c1c1c;
+    --warn-bg: #2a2115;
+    --warn-line: #b9822f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; }
+
+header {
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0 18px;
+  margin-bottom: 32px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .02em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 10px; }
+h2 { font-size: 20px; margin: 38px 0 12px; padding-top: 6px; border-top: 1px solid var(--line); }
+h3 { font-size: 16px; margin: 24px 0 8px; }
+
+.meta { color: var(--muted); font-size: 14px; margin: 0; }
+
+.langbar { margin: 14px 0 0; font-size: 14px; }
+.langbar a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.langbar a:hover { text-decoration: underline; }
+.langbar span { color: var(--muted); }
+
+a { color: var(--accent); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 15px;
+  display: block;
+  overflow-x: auto;
+}
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--card); font-weight: 600; white-space: nowrap; }
+
+ul, ol { padding-left: 22px; }
+li { margin: 6px 0; }
+
+code {
+  background: var(--card);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 90%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.callout {
+  background: var(--warn-bg);
+  border-left: 4px solid var(--warn-line);
+  padding: 14px 16px;
+  margin: 20px 0;
+  border-radius: 0 6px 6px 0;
+}
+.callout p { margin: 0; }
+.callout strong { display: block; margin-bottom: 4px; }
+
+.todo {
+  background: var(--card);
+  border: 1px dashed var(--accent);
+  padding: 14px 16px;
+  margin: 20px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin: 24px 0; }
+.card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  background: var(--card);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card:hover { border-color: var(--accent); }
+.card h3 { margin: 0 0 4px; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+.draft {
+  background: #fff4d6;
+  border: 1px solid #e0b943;
+  color: #6b4e00;
+  padding: 14px 16px;
+  margin: 18px 0 26px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+@media (prefers-color-scheme: dark) {
+  .draft { background: #3a2f10; border-color: #7d6320; color: #f0dda6; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="brand">Gym Progress Tracker</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: <strong>30 July 2026</strong> · Effective: <strong>30 July 2026</strong></p>
+  <p class="langbar"><span>Language:</span> English · <a href="privacy.html">Türkçe</a></p>
+</header>
+
+<div class="draft">
+  <strong>⚠️ DRAFT — NOT READY FOR PUBLICATION</strong><br>
+  This text is not final. Data controller details (legal name, address, contact) are
+  not yet filled in and the text has not undergone legal review. The app is not yet
+  published, so this page is available for information only; the final version
+  submitted to Google Play will be published once these fields are completed.
+</div>
+
+<div class="todo">
+  <strong>Before publishing — fill these in:</strong> data controller legal name, contact e-mail,
+  and country of establishment. Every <code>[…]</code> placeholder below must be replaced.
+</div>
+
+<p>This Privacy Policy explains what personal data the <strong>Gym Progress Tracker</strong> mobile
+application ("the App") collects, why it is collected, who it is shared with, and the rights you
+have over it.</p>
+
+<p>The data controller is <strong>[LEGAL NAME OF DEVELOPER / COMPANY]</strong>, [ADDRESS], contactable
+at <strong>[CONTACT E-MAIL]</strong>.</p>
+
+<h2>1. Data we collect</h2>
+
+<p>We only collect data you enter yourself. The App has no advertising, no analytics SDK, and no
+tracking for marketing purposes.</p>
+
+<table>
+  <tr><th>Category</th><th>Specific data</th><th>Why</th></tr>
+  <tr>
+    <td>Account</td>
+    <td>E-mail address, first and last name, username, password</td>
+    <td>To create and secure your account and let friends find you</td>
+  </tr>
+  <tr>
+    <td>Profile &amp; body data</td>
+    <td>Age, gender, height, current body weight, body-weight history</td>
+    <td>To calculate progress, benchmarks and personalised statistics</td>
+  </tr>
+  <tr>
+    <td>Training data</td>
+    <td>Exercises you create, workout logs (weight, repetitions, sets, date), routines, streak
+        counters, personal records</td>
+    <td>The core purpose of the App</td>
+  </tr>
+  <tr>
+    <td>Social</td>
+    <td>Friend list, friend requests sent and received</td>
+    <td>To operate the optional friends feature</td>
+  </tr>
+  <tr>
+    <td>Technical</td>
+    <td>Firebase authentication identifier (UID), account creation and last sign-in timestamps</td>
+    <td>Authentication and abuse prevention</td>
+  </tr>
+  <tr>
+    <td>On-device only</td>
+    <td>Notification preferences, rest-timer settings, language choice, onboarding state</td>
+    <td>Stored locally on your device and <strong>not</strong> transmitted to us</td>
+  </tr>
+</table>
+
+<div class="callout">
+  <strong>Health-related data</strong>
+  <p>Body weight, height, age, gender and training records may qualify as health-related data under
+  Article 9 GDPR. We process this data <em>only</em> on the basis of your explicit consent, given
+  when you enter it, and solely to provide the App's features. You may withdraw consent at any time
+  by deleting the relevant entries or your entire account.</p>
+</div>
+
+<p>We do <strong>not</strong> collect: location data, contacts, photos, camera or microphone input,
+device identifiers for advertising, or your browsing activity outside the App.</p>
+
+<h2>2. Legal basis for processing</h2>
+
+<ul>
+  <li><strong>Performance of a contract</strong> (Art. 6(1)(b) GDPR) — account data and training data
+      are required to provide the service you signed up for.</li>
+  <li><strong>Explicit consent</strong> (Art. 9(2)(a) GDPR) — body and health-related data.</li>
+  <li><strong>Legitimate interests</strong> (Art. 6(1)(f) GDPR) — keeping the service secure and
+      preventing abuse.</li>
+  <li><strong>Legal obligation</strong> (Art. 6(1)(c) GDPR) — where we must retain records to comply
+      with applicable law.</li>
+</ul>
+
+<h2>3. Permissions the App requests</h2>
+
+<table>
+  <tr><th>Permission</th><th>What it is used for</th><th>Required?</th></tr>
+  <tr><td><code>INTERNET</code></td><td>Sync your data with our servers</td><td>Yes</td></tr>
+  <tr><td><code>POST_NOTIFICATIONS</code></td><td>Rest-timer and workout-reminder notifications</td><td>No — the App works without it</td></tr>
+  <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Making the rest timer finish at the exact second</td><td>No — you may decline; timing becomes approximate</td></tr>
+  <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Restoring your scheduled reminders after a device restart</td><td>No</td></tr>
+  <tr><td><code>VIBRATE</code></td><td>Haptic feedback when a timer ends</td><td>No</td></tr>
+</table>
+
+<p>The App requests no camera, microphone, location, contacts or file-storage permissions.</p>
+
+<h2>4. Who we share data with</h2>
+
+<p>We do not sell your personal data, and we do not share it for advertising purposes. Data is shared
+only with the following processors and only to the extent necessary to run the App:</p>
+
+<table>
+  <tr><th>Recipient</th><th>Purpose</th><th>Where</th></tr>
+  <tr>
+    <td><strong>Google Firebase</strong> (Authentication, Cloud Firestore) — Google Ireland Ltd. /
+        Google LLC</td>
+    <td>Account authentication and database storage</td>
+    <td>European Union (Firestore region <code>eur3</code>: Belgium and the Netherlands)</td>
+  </tr>
+  <tr>
+    <td><strong>YouTube</strong> (Google)</td>
+    <td>Only if you play an embedded exercise video. YouTube then receives your IP address and may
+        set cookies under its own policy.</td>
+    <td>Google infrastructure</td>
+  </tr>
+</table>
+
+<p>Other users see only what the friends feature requires: your username, display name, streak,
+and — if you are friends — your exercise list for comparison. Your e-mail address, body weight and
+body-weight history are never shown to other users.</p>
+
+<h2>5. International transfers</h2>
+
+<p>Your data is stored in the European Union. Where Google processes data outside the EU as part of
+its infrastructure, it does so under the European Commission's Standard Contractual Clauses. For
+users in Türkiye, storage in the EU constitutes a transfer abroad under KVKK; see the
+<a href="privacy.html">Turkish version</a> for the KVKK-specific disclosure.</p>
+
+<h2>6. How long we keep data</h2>
+
+<ul>
+  <li><strong>While your account exists</strong> — account, profile and training data are retained so
+      the App can show your history.</li>
+  <li><strong>On account deletion</strong> — your profile, exercises, workout logs, friend requests
+      and friend-list entries are deleted, and your authentication record is removed. Deletion is
+      immediate and is initiated from within the App (Profile → Delete Account).</li>
+  <li><strong>Backups</strong> — residual copies may persist in our provider's backups for a short
+      period before being overwritten.</li>
+</ul>
+
+<h2>7. Your rights</h2>
+
+<p>Under the GDPR you have the right to access, rectify, erase, restrict, port and object to the
+processing of your personal data, and to withdraw consent at any time. You may also lodge a complaint
+with your local supervisory authority.</p>
+
+<p>Many of these you can exercise directly in the App: edit your profile to rectify data, and use
+Profile → Delete Account to erase everything. For anything else, write to
+<strong>[CONTACT E-MAIL]</strong>. We respond within 30 days.</p>
+
+<h2>8. Security</h2>
+
+<p>Traffic between the App and our servers is encrypted with TLS. Access to stored data is enforced
+by server-side security rules: your workout logs are readable only by your own authenticated
+account, and no user can write to another user's records. Passwords are handled by Firebase
+Authentication and are never visible to us.</p>
+
+<p>No system is perfectly secure. If a breach affects your rights, we will notify you and the
+competent authority as required by law.</p>
+
+<h2>9. Children</h2>
+
+<p>The App is not directed at children under 13, and we do not knowingly collect their data. In the
+EEA and the UK, users under 16 need the consent of a parent or guardian. If you believe a child has
+provided us data, contact <strong>[CONTACT E-MAIL]</strong> and we will delete it.</p>
+
+<h2>10. Changes to this policy</h2>
+
+<p>We may update this policy. The "last updated" date at the top always reflects the current version.
+If a change materially affects your rights, we will notify you in the App or by e-mail at least
+<strong>30 days</strong> before it takes effect.</p>
+
+<h2>11. Contact</h2>
+
+<p><strong>[LEGAL NAME OF DEVELOPER / COMPANY]</strong><br>
+[ADDRESS]<br>
+E-mail: <strong>[CONTACT E-MAIL]</strong></p>
+
+<footer>
+  <p><a href="index.html">← All documents</a> · <a href="terms-of-service-en.html">Terms of Service</a> ·
+     <a href="privacy.html">Türkçe</a></p>
+</footer>
+
+</div>
+</body>
+</html>
