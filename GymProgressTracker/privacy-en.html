@@ -230,8 +230,11 @@ tracking for marketing purposes.</p>
   by deleting the relevant entries or your entire account.</p>
 </div>
 
-<p>We do <strong>not</strong> collect: location data, contacts, photos, camera or microphone input,
+<p>We do <strong>not</strong> collect: location data, contacts, photos, camera input, audio recordings,
 device identifiers for advertising, or your browsing activity outside the App.</p>
+
+<p>If you use voice logging, the microphone <em>is used</em>, but no audio recording is created or
+retained — see Section 3.1 for details.</p>
 
 <h2>2. Legal basis for processing</h2>
 
@@ -254,9 +257,29 @@ device identifiers for advertising, or your browsing activity outside the App.</
   <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Making the rest timer finish at the exact second</td><td>No — you may decline; timing becomes approximate</td></tr>
   <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Restoring your scheduled reminders after a device restart</td><td>No</td></tr>
   <tr><td><code>VIBRATE</code></td><td>Haptic feedback when a timer ends</td><td>No</td></tr>
+  <tr><td><code>RECORD_AUDIO</code></td><td>Logging a workout by voice (&ldquo;3 sets of 10 at 25 kg&rdquo;)</td><td>No — requested only when you tap the microphone button</td></tr>
 </table>
 
-<p>The App requests no camera, microphone, location, contacts or file-storage permissions.</p>
+<p>The App requests no camera, location, contacts or file-storage permissions.</p>
+
+<h3>3.1. About voice logging</h3>
+
+<p>Voice logging is an <strong>optional</strong> convenience. The microphone permission is requested only
+when you tap the microphone button, after the reason has been explained to you. If you decline, the
+rest of the App works exactly as before.</p>
+
+<ul>
+  <li><strong>The App does not record or store audio.</strong> What you say is not written to a file on
+      your device, is not sent to our servers, and is not retained.</li>
+  <li>Your speech is passed to the <strong>speech recognition service provided by your device's operating
+      system</strong> (Google on Android, Apple on iOS), which converts it to text. Depending on your
+      device settings and OS version, this may happen on-device or on that provider's servers; such
+      processing is governed by that provider's own privacy policy.</li>
+  <li>The App receives only the resulting <strong>text</strong> and extracts the set, rep and weight
+      numbers from it. This extraction happens entirely on your device.</li>
+  <li>Values entered by voice are <strong>never saved automatically</strong>; they are shown on screen and
+      nothing is written until you confirm.</li>
+</ul>
 
 <h2>4. Who we share data with</h2>
 

@@ -230,8 +230,11 @@ amaçlı izleme <strong>bulunmuyor</strong>.</p>
   kayıtları veya hesabınızın tamamını silerek her zaman geri çekebilirsiniz.</p>
 </div>
 
-<p>Şunları <strong>toplamıyoruz</strong>: konum verisi, rehber/kişiler, fotoğraflar, kamera veya
-mikrofon kaydı, reklam kimlikleri, Uygulama dışındaki gezinme geçmişiniz.</p>
+<p>Şunları <strong>toplamıyoruz</strong>: konum verisi, rehber/kişiler, fotoğraflar, kamera kaydı,
+ses kaydı, reklam kimlikleri, Uygulama dışındaki gezinme geçmişiniz.</p>
+
+<p>Sesle antrenman kaydetme özelliğini kullanırsanız mikrofon <em>kullanılır</em>, ancak ses kaydı
+oluşturulmaz ve saklanmaz — ayrıntı için bkz. Bölüm 3.1.</p>
 
 <h2>2. İşlemenin hukuki sebebi</h2>
 
@@ -253,9 +256,29 @@ mikrofon kaydı, reklam kimlikleri, Uygulama dışındaki gezinme geçmişiniz.<
   <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>Dinlenme sayacının saniyesi saniyesine bitmesi</td><td>Hayır — reddedebilirsiniz, süre yaklaşık olur</td></tr>
   <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Cihaz yeniden başladıktan sonra hatırlatmaların geri yüklenmesi</td><td>Hayır</td></tr>
   <tr><td><code>VIBRATE</code></td><td>Sayaç bittiğinde titreşimli geri bildirim</td><td>Hayır</td></tr>
+  <tr><td><code>RECORD_AUDIO</code></td><td>Antrenmanı sesle kaydetme (&ldquo;3 set 10 tekrar 25 kilo&rdquo;)</td><td>Hayır — yalnızca mikrofon düğmesine bastığınızda istenir</td></tr>
 </table>
 
-<p>Uygulama kamera, mikrofon, konum, rehber veya dosya depolama izni istemez.</p>
+<p>Uygulama kamera, konum, rehber veya dosya depolama izni istemez.</p>
+
+<h3>3.1. Sesle kayıt hakkında</h3>
+
+<p>Sesle antrenman kaydetme <strong>isteğe bağlı</strong> bir kolaylıktır. Mikrofon izni yalnızca siz
+mikrofon düğmesine bastığınızda, size nedeni açıklandıktan sonra istenir. İzin vermezseniz
+uygulamanın geri kalanı aynen çalışır.</p>
+
+<ul>
+  <li><strong>Uygulama ses kaydı tutmaz.</strong> Söyledikleriniz cihazınızda bir dosyaya yazılmaz,
+      bizim sunucularımıza gönderilmez ve saklanmaz.</li>
+  <li>Konuşmanız, <strong>cihazınızın işletim sistemi tarafından sağlanan konuşma tanıma servisine</strong>
+      iletilir (Android'de Google, iOS'ta Apple). Bu servis sesi yazıya çevirir. Cihaz ayarlarınıza ve
+      işletim sistemi sürümünüze bağlı olarak bu işlem cihaz üzerinde ya da ilgili sağlayıcının
+      sunucularında gerçekleşebilir; bu işleme, o sağlayıcının kendi gizlilik politikasına tabidir.</li>
+  <li>Uygulama yalnızca ortaya çıkan <strong>metni</strong> alır ve içinden set, tekrar ve ağırlık
+      sayılarını ayıklar. Bu ayıklama tamamen cihaz üzerinde yapılır.</li>
+  <li>Sesle girilen değerler <strong>otomatik kaydedilmez</strong>; ekranda gösterilir, onaylayana
+      kadar hiçbir veri yazılmaz.</li>
+</ul>
 
 <h2>4. Kimlerle paylaşılıyor?</h2>
 
