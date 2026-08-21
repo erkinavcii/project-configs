@@ -19,6 +19,19 @@ yapılandırma metinleri.
   taşındığında tek bir commit ile kurulu uygulamalar düzelir, yeni sürüm
   yayınlamaya gerek kalmaz.
 
+- `Eksim/privacy.html`, `Eksim/terms-of-service.html`, `Eksim/index.html` —
+  aynı projenin, Google Play'in yayın öncesi **herkese açık URL'den erişilebilir
+  olmasını zorunlu tuttuğu** yasal metinleri. Kaynak kod private repoda olduğu için
+  burada. Yalnızca Türkçe; uygulama Türkiye'ye yönelik.
+  Play Console'a verilecek gizlilik politikası URL'si:
+  `https://erkinavcii.github.io/project-configs/Eksim/privacy.html`
+
+  ⚠️ Metinlerde köşeli parantezli boşluk yok, ama **destek adresi
+  `destek@eksim.app` henüz kayıtlı değil** — alan adı alınana ya da başka bir
+  adresle değiştirilene kadar posta teslim edilemez döner. Kaynak, güncellenirken
+  Eksim reposundaki `docs/` klasörüdür — değişiklik oradan yapılıp buraya
+  yeniden kopyalanmalı.
+
 - `FamilyPulse/` — [FamilyPulse](https://github.com/erkinavcii/FamilyPulse)
   (aile güvenlik/konum takibi uygulaması) için Google Play'in **yayın
   öncesi zorunlu tuttuğu, herkese açık URL'den erişilebilir olması gereken**

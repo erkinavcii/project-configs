@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ekşim — Gizlilik ve Veri Kullanımı Politikası</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 760px; margin: 0 auto; padding: 32px 20px 64px;
+    line-height: 1.65; color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #161616; }
+    .box { background: #222 !important; border-color: #3a3a3a !important; }
+    code { background: #2a2a2a !important; }
+    th { background: #222 !important; }
+    td, th { border-color: #3a3a3a !important; }
+    a { color: #6cb4ff; }
+  }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.2rem; }
+  .sub { color: #666; margin-top: 0; }
+  .nav-links { font-size: .9rem; margin-top: 10px; }
+  .box { background: #f6f7f9; border: 1px solid #e3e5e8; border-radius: 12px; padding: 16px 18px; margin: 20px 0; }
+  .draft { background: #fff4d6; border: 1px solid #e0b943; color: #6b4e00; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: .9em; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: .93rem; }
+  th, td { border: 1px solid #e3e5e8; padding: 9px 11px; text-align: left; vertical-align: top; }
+  th { background: #f6f7f9; }
+</style>
+</head>
+<body>
+
+<h1>Ekşim — Gizlilik ve Veri Kullanımı Politikası</h1>
+<p class="sub">Son güncelleme: 21 Ağustos 2026</p>
+<p class="nav-links"><a href="./terms-of-service.html">Kullanım Şartları (Kullanıcı Sözleşmesi)</a></p>
+
+<h2>1. Veri Sorumlusu ve Hizmetin Niteliği</h2>
+<p>
+  <strong>Erkin Avcı</strong> ("Sağlayıcı", "biz") tarafından geliştirilen <strong>Ekşim</strong> mobil uygulaması ("Uygulama"), <code>eksisozluk.com</code> web sitesi için geliştirilmiş bağımsız, istemci taraflı (client-side) alternatif bir arayüzdür.
+  <br>İletişim: <code>destek@eksim.app</code>
+</p>
+<p>
+  <strong>Önemli Bağımsızlık Beyanı:</strong> Ekşim, Ekşi Sözlük (Ekşi Teknoloji) ile hiçbir resmi bağlantısı, sponsorluğu veya ortaklığı bulunmayan tamamen bağımsız bir istemcidir.
+</p>
+
+<h2>2. Veri Toplama ve Depolama Prensipleri (Backendless Yapı)</h2>
+<p>
+  Ekşim, <strong>kendi sunucusu (backend) bulunmayan</strong> istemci taraflı bir uygulamadır. Tüm içerik ve ağ istekleri doğrudan kullanıcının kendi cihazından ve kendi IP adresi üzerinden hedef siteye (<code>eksisozluk.com</code>) iletilir.
+</p>
+
+<table>
+  <tr><th>Veri Türü</th><th>Nerede Saklanır / İşlenir?</th><th>Açıklama ve Amaç</th></tr>
+  <tr>
+    <td><strong>Kullanıcı Adı ve Parola</strong></td>
+    <td><strong>HİÇBİR YERDE SAKLANMAZ</strong></td>
+    <td>Giriş yapıldığında kimlik bilgileri uygulama tarafından okunmaz, kaydedilmez veya loglanmaz. Giriş sitenin kendi resmi WebView arayüzünde gerçekleşir.</td>
+  </tr>
+  <tr>
+    <td><strong>Kaydedilen Entry'ler ve Tercihler</strong></td>
+    <td><strong>SADECE CİHAZ İÇİNDE (Yerel)</strong></td>
+    <td>Kaydettiğiniz entry'ler ve uygulama tercihleri yalnızca cihazınızın yerel hafızasında (SharedPreferences ve uygulama klasöründeki dosyalar) çevrimdışı okuma ve hızlı erişim amacıyla saklanır. Üçüncü taraflara iletilmez.</td>
+  </tr>
+  <tr>
+    <td><strong>Cihaz ve Ağ Bilgileri (User-Agent, IP)</strong></td>
+    <td><strong>İstemci ↔ eksisozluk.com</strong></td>
+    <td>HTTP istekleri sırasında cihazınızın standart WebView User-Agent bilgisi ve IP adresi doğrudan hedef site sunucularına iletilir.</td>
+  </tr>
+  <tr>
+    <td><strong>Reklam Tanımlayıcısı (Advertising ID)</strong></td>
+    <td><strong>Üçüncü Taraf Reklam Ağları (AdMob vb.)</strong></td>
+    <td>İleride gösterilecek reklamlar kapsamında cihazınızın anonim Reklam Tanımlayıcısı (Advertising ID) reklam ağları tarafından reklam sıklığını sınırlamak ve anonim reklam sunumu amacıyla işlenebilir.</td>
+  </tr>
+  <tr>
+    <td><strong>Uygulama İçi Satın Alma Bilgileri</strong></td>
+    <td><strong>Google Play Store / Apple App Store</strong></td>
+    <td>Uygulama içi satın alımlarda finansal ve kart bilgileriniz Sağlayıcı tarafından HİÇBİR ŞEKİLDE görülmez veya saklanmaz. Ödeme işlemleri doğrudan ilgili uygulama mağazasının güvenli altyapısı üzerinden yürütülür.</td>
+  </tr>
+  <tr>
+    <td><strong>Yapılandırma Verileri (selectors.json)</strong></td>
+    <td><strong>GitHub Raw / Yerel Depo</strong></td>
+    <td>Uygulama, site yapısındaki değişikliklere uyum sağlamak için GitHub Raw üzerinden statik bir selector JSON dosyası indirir. Bu işlem sırasında hiçbir kişisel veri gönderilmez.</td>
+  </tr>
+</table>
+
+<h2>3. Üçüncü Taraflar ve Sağlayıcılar</h2>
+<ul>
+  <li><strong>eksisozluk.com:</strong> Uygulamanın görüntülediği tüm içerik doğrudan bu platformdan çekilmektedir. İçerik ve oturum çerezleri ilgili platformun kendi gizlilik politikalarına tabidir.</li>
+  <li><strong>GitHub Pages / GitHub Raw:</strong> Uygulama, dinamik CSS selector ve URL yapılandırma dosyasını (<code>selectors.json</code>) GitHub sunucularından anonim olarak çeker.</li>
+  <li><strong>Reklam Ağları (AdMob vb.):</strong> Uygulama içinde reklam gösterilmesi durumunda üçüncü taraf reklam sağlayıcıları anonim cihaz tanımlayıcılarını kullanabilir. Sağlayıcı reklam ağlarının politikalarında veya gösterim sıklığında değişiklik yapma hakkını saklı tutar.</li>
+  <li><strong>Uygulama Mağazaları (Google Play / Apple App Store):</strong> Uygulama içi satın alma, ücretlendirme, fiyat güncellemeleri ve iade süreçleri ilgili uygulama mağazasının kendi hizmet ve gizlilik koşullarına tabidir.</li>
+  <li><strong>Analiz ve İzleme:</strong> Uygulama içinde kullanıcı davranışlarını izleyen hiçbir üçüncü taraf analiz (Analytics) veya analitik takip SDK'sı yer almamaktadır.</li>
+</ul>
+
+<h2>4. Çocukların Gizliliği</h2>
+<p>
+  Uygulama 13 yaşın altındaki çocuklara yönelik değildir. Çocuklara ait herhangi bir kişisel veri bilerek toplanmamakta ve işlenmemektedir.
+</p>
+
+<h2>5. Haklarınız ve İletişim</h2>
+<p>
+  Verileriniz harici bir sunucuda tutulmadığı için verilerinizi silmek veya sıfırlamak için uygulamanın verilerini cihazınızın <em>Ayarlar > Uygulamalar > Ekşim > Verileri Temizle</em> adımlarından istediğiniz an silebilir veya uygulamayı cihazınızdan kaldırabilirsiniz.
+</p>
+<p>
+  Gizlilik politikamıza ilişkin sorularınız için <code>destek@eksim.app</code> adresi üzerinden bizimle iletişime geçebilirsiniz.
+</p>
+
+</body>
+</html>
